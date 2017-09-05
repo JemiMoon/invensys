@@ -39,7 +39,7 @@ public class UserController {
 		
 		if(bindingResult.hasErrors()) 
 		{
-			return "Registration";
+			return "registration";
 		}
 		
 		userService.save(userForm);

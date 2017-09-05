@@ -21,6 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 	
+	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 				.authorizeRequests()
@@ -35,6 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 					.permitAll();
 	}
 	
+	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder invensys) throws Exception {
 		invensys.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}

@@ -27,7 +27,7 @@
 </head>
 
 <body>
-e
+
 <div class="container">
 
     <form method="POST" action="${contextPath}/login" class="form-signin">
